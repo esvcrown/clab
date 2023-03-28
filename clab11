@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+struct Date{
+    int month;
+		int day;
+		int year;
+		char event[100];
+};
+
+void printDateInfo(struct Date aDate) {
+  printf("%d", aDate.month);
+  printf("/");
+  printf("%d", aDate.day);
+  printf("/");
+  printf("%d", aDate.year);
+  printf(" signifies "); 
+  printf("%s", aDate.event);
+}
+
+
+int main(void) {
+  struct Date theDate;
+
+  printf("Enter a month (1-12): ");
+  scanf("%d",&theDate.month);
+
+  printf("Enter a day: ");
+  scanf("%d",&theDate.day);
+
+  printf("Enter a year: ");
+  scanf("%d",&theDate.year);
+
+  printf("Enter the event that this date signifies: ");
+  scanf("%s", &theDate.event);
+
+  printDateInfo(theDate);
+  
+  return 0;
+}
